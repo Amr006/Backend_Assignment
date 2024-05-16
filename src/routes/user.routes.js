@@ -29,11 +29,8 @@ async function routes(fastify, options) {
         },
         500: {
           description: 'Internal server error. Failed to retrieve users',
-          type: 'object',
-          properties: {
-            error: { type: 'string' }
-            // Add other properties here as needed
-          }
+          type: 'string',
+          default: "Internal server error"
         }
       }
     }
@@ -65,11 +62,13 @@ async function routes(fastify, options) {
         },
         404: {
           description: 'User not found. The requested user does not exist',
-          type: 'string'
+          type: 'string',
+          default: 'User not found'
         },
         500: {
           description: 'Internal server error. Failed to retrieve user',
-          type: 'string'
+          type: 'string',
+          default: 'Internal server error'
         }
       }
     }
@@ -106,7 +105,8 @@ async function routes(fastify, options) {
       },
       500: {
         description: 'Internal server error. Failed to create user',
-        type: 'string'
+        type: 'string',
+        default: 'Internal server error'
       }
     }
   }
@@ -146,11 +146,13 @@ async function routes(fastify, options) {
       },
       404: {
         description: 'User not found. The requested user does not exist',
-        type: 'string'
+        type: 'string',
+        default: 'User not found'
       },
       500: {
         description: 'Internal server error. Failed to update user',
-        type: 'string'
+        type: 'string',
+        default: 'Internal server error'
       }
     }
   }
@@ -168,11 +170,13 @@ async function routes(fastify, options) {
     response: {
       204: {
         description: 'No content. User successfully deleted',
-        type: 'string'
+        type: 'string',
+        default: ''
       },
       500: {
         description: 'Internal server error. Failed to delete user',
-        type: 'string'
+        type: 'string',
+        default: 'Internal server error'
       }
     }
   }

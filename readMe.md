@@ -6,7 +6,7 @@ Fastify application with CRUD operations endpoints with swagger Documentation an
 ## Installation
 1. Clone this repository to your local machine.
 2. Install dependencies using `npm install` 
-3. Add the .env file that includes your mongodb_url you can see example in .sample.env
+3. Add the .env file that includes your MONGODB_URL you can see example in .sample.env
 
 ## Running the Server
 To start the server, follow these steps:

@@ -46,6 +46,7 @@ wss.on("connection", (ws) => {
       ws.send('received message: '+ data);
 
       //this is for broadcasting to other clients
+      
       // wss.clients.forEach(function each(client) {
       //   if (client !== ws && client.readyState === WebSocket.OPEN) {
       //     client.send(data, { binary: isBinary });
